@@ -56,7 +56,7 @@ How r you?
 Terminal 2# /opt/kafka/kafka_2.12-2.2.0/bin# ./kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic second-topic --from-beginning
  
 ```
-## Run the Java producer to insert data to first-topic, the messages arrived out of order but in round-robin to all the brokers
+## Run the Java producer to insert data to first-topic, the messages arrived out of order but in round-robin to all the partitions
 ```
 Terminal 1# /opt/kafka/kafka_2.12-2.2.0/bin# ./kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --group first-app-group --topic first-topic
 
