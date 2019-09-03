@@ -21,6 +21,7 @@ public class ProducerDemoWithCallback {
             prop.load(input);
             prop.load(input);
             bootStrapServers = prop.getProperty("kafkaServer");
+            topic = prop.getProperty("topic");
         }
         catch (IOException ex){
             ex.printStackTrace();
@@ -36,7 +37,7 @@ public class ProducerDemoWithCallback {
 
         for (int i=0; i <10 ; i++) {
            // Create Producer
-            ProducerRecord<String, String> record = new ProducerRecord<String, String>("first-topic", "Hello World: " + Integer.toString(i) );
+            ProducerRecord<String, String> record = new ProducerRecord<String, String>(topic, "Hello World: " + Integer.toString(i) );
            // send data- async and this is executed later on
            producer.send(record, new Callback() {
                public void onCompletion(RecordMetadata recordMetadata, Exception e) {
