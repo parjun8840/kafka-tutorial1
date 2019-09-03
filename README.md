@@ -75,9 +75,9 @@ Hello World: 8
 Terminal 2# /opt/kafka/kafka_2.12-2.2.0/bin# ./kafka-consumer-groups.sh --bootstrap-server 127.0.0.1:9092 --describe --group first-app-group
 
 TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                     HOST            CLIENT-ID
-first-topic     0          3               3               0               consumer-1-a529296b-e32e-4ab0-9cd4-0b24c26d7f5e /10.129.36.239  consumer-1
-first-topic     1          3               3               0               consumer-1-a529296b-e32e-4ab0-9cd4-0b24c26d7f5e /10.129.36.239  consumer-1
-first-topic     2          4               4               0               consumer-1-a529296b-e32e-4ab0-9cd4-0b24c26d7f5e /10.129.36.239  consumer-1
+first-topic     0          3               3               0               consumer-1-a529296b-e32e-4ab0-9cd4-0b24c26d7f5e /x.x.x.1  consumer-1
+first-topic     1          3               3               0               consumer-1-a529296b-e32e-4ab0-9cd4-0b24c26d7f5e /x.x.x.2  consumer-1
+first-topic     2          4               4               0               consumer-1-a529296b-e32e-4ab0-9cd4-0b24c26d7f5e /x.x.x.3  consumer-1
 first_topic     0          50              50              0               -                                               -               -
 Terminal 2# /opt/kafka/kafka_2.12-2.2.0/bin# 
 
