@@ -163,7 +163,7 @@ first-topic     1          23              23              0               consu
 first-topic     2          24              24              0               consumer-1-743bc294-417d-4c18-92e9-3da6ef02e2e2 /x.x.x.3    consumer-1
 first_topic     0          50              50              0               -                                               -               -
 ```
-
+whenever new consumer gets added to the group, rebalancing (data and consumer ) takes place. You can verify it in the logs.
 
 ## License
 Apache license 2.0
