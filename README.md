@@ -83,5 +83,79 @@ Terminal 2# /opt/kafka/kafka_2.12-2.2.0/bin#
 
 ```
 
+## Running Java programs- ProducerDemoWithCallback and ConsumerDemo
+```
+[kafka-producer-network-thread | producer-1] INFO org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: q-g8nbxRT22xzLPr_BqpFg
+[kafka-producer-network-thread | producer-1] INFO com.giuthub.parjun8840.kafka.tutorial1.ProducerDemoWithCallback - Received new metadata 
+Topic:first-topic
+Partition:1
+Offset:23
+TimeStamp:1567516692066
+[kafka-producer-network-thread | producer-1] INFO com.giuthub.parjun8840.kafka.tutorial1.ProducerDemoWithCallback - Received new metadata 
+Topic:first-topic
+Partition:1
+Offset:24
+TimeStamp:1567516692075
+[kafka-producer-network-thread | producer-1] INFO com.giuthub.parjun8840.kafka.tutorial1.ProducerDemoWithCallback - Received new metadata 
+Topic:first-topic
+Partition:1
+Offset:25
+TimeStamp:1567516692075
+[kafka-producer-network-thread | producer-1] INFO com.giuthub.parjun8840.kafka.tutorial1.ProducerDemoWithCallback - Received new metadata 
+Topic:first-topic
+Partition:1
+Offset:26
+TimeStamp:1567516692075
+[kafka-producer-network-thread | producer-1] INFO com.giuthub.parjun8840.kafka.tutorial1.ProducerDemoWithCallback - Received new metadata 
+Topic:first-topic
+Partition:0
+Offset:22
+TimeStamp:1567516692074
+[kafka-producer-network-thread | producer-1] INFO com.giuthub.parjun8840.kafka.tutorial1.ProducerDemoWithCallback - Received new metadata 
+Topic:first-topic
+Partition:0
+Offset:23
+TimeStamp:1567516692075
+[kafka-producer-network-thread | producer-1] INFO com.giuthub.parjun8840.kafka.tutorial1.ProducerDemoWithCallback - Received new metadata 
+Topic:first-topic
+Partition:0
+Offset:24
+TimeStamp:1567516692075
+[kafka-producer-network-thread | producer-1] INFO com.giuthub.parjun8840.kafka.tutorial1.ProducerDemoWithCallback - Received new metadata 
+Topic:first-topic
+Partition:2
+Offset:24
+TimeStamp:1567516692075
+[kafka-producer-network-thread | producer-1] INFO com.giuthub.parjun8840.kafka.tutorial1.ProducerDemoWithCallback - Received new metadata 
+Topic:first-topic
+Partition:2
+Offset:25
+TimeStamp:1567516692075
+```
+```
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Key: null, ValueHello World: 1
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :14
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Key: null, ValueHello World: 4
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :15
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Key: null, ValueHello World: 7
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :16
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Key: null, ValueHello World: 2
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :17
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Key: null, ValueHello World: 5
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :18
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Key: null, ValueHello World: 8
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :19
+```
+```
+Terminal 2# /opt/kafka/kafka_2.12-2.2.0/bin# ./kafka-consumer-groups.sh --bootstrap-server 127.0.0.1:9092 --describe --group first-app-group
+
+TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                     HOST            CLIENT-ID
+first-topic     0          22              22              0               consumer-1-743bc294-417d-4c18-92e9-3da6ef02e2e2 /x.x.x.1    consumer-1
+first-topic     1          23              23              0               consumer-1-743bc294-417d-4c18-92e9-3da6ef02e2e2 /x.x.x.2    consumer-1
+first-topic     2          24              24              0               consumer-1-743bc294-417d-4c18-92e9-3da6ef02e2e2 /x.x.x.3    consumer-1
+first_topic     0          50              50              0               -                                               -               -
+```
+
+
 ## License
 Apache license 2.0
