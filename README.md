@@ -133,18 +133,26 @@ Offset:25
 TimeStamp:1567516692075
 ```
 ```
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-1, groupId=first-app-group] Setting newly assigned partitions: first-topic-1, first-topic-0, first-topic-2
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-1, groupId=first-app-group] Setting offset for partition first-topic-1 to the committed offset FetchPosition{offset=23, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=x.x.x.x:9092 (id: 0 rack: null), epoch=0}}
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-1, groupId=first-app-group] Setting offset for partition first-topic-0 to the committed offset FetchPosition{offset=22, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=x.x.x.x:9092 (id: 0 rack: null), epoch=0}}
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-1, groupId=first-app-group] Setting offset for partition first-topic-2 to the committed offset FetchPosition{offset=24, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=x.x.x.x:9092 (id: 0 rack: null), epoch=0}}
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Key: null, ValueHello World: 0
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :23
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Key: null, ValueHello World: 3
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :24
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Key: null, ValueHello World: 6
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :25
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Key: null, ValueHello World: 9
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :26
 [main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Key: null, ValueHello World: 1
-[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :14
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :27
 [main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Key: null, ValueHello World: 4
-[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :15
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :28
 [main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Key: null, ValueHello World: 7
-[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :16
-[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Key: null, ValueHello World: 2
-[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :17
-[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Key: null, ValueHello World: 5
-[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :18
-[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Key: null, ValueHello World: 8
-[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :19
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Partition: 1, Offset :29
+[main] INFO com.giuthub.parjun8840.kafka.tutorial1.ConsumerDemo - Key: null, ValueHello World: 1
+[main] INFO c
 ```
 ```
 Terminal 2# /opt/kafka/kafka_2.12-2.2.0/bin# ./kafka-consumer-groups.sh --bootstrap-server 127.0.0.1:9092 --describe --group first-app-group
