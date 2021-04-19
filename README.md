@@ -37,7 +37,7 @@ Terminal 1# opt/kafka/kafka_2.12-2.2.0/bin# ./kafka-console-producer.sh --broker
 
 Terminal 2#/opt/kafka/kafka_2.12-2.2.0/bin# ./kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic second-topic
 
-You won't see any data, by default it is looking for new messages. If we send the new messages( in this we have re-run the command), we can see the data.
+You won't see data, by default it is looking for new messages. If we send the new messages( in this we have re-run the command), we can see the data.
 
 2. Pushing data from console producer with consumer also running:
 Terminal 1# /opt/kafka/kafka_2.12-2.2.0/bin# ./kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic second-topic
